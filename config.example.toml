@@ -1,0 +1,18 @@
+# this domain will be managed by ts-ddns, and it is possible to create or delete any subdomain of ts.example.com
+managed_host = 'ts.example.com'
+ipv4 = true
+ipv6 = false
+interval = 300
+
+[tailscale]
+method = 'oauth2' # token is not supported yet, but token only has 90 days expiration, so support for token is unnecesary
+tailnet = ''
+client_id = ''
+client_secret = ''
+
+[dns]
+provider = 'cloudflare' # only cloudflare is supported for now
+
+[dns.params]
+# cloudflare api token
+api_token = ''
