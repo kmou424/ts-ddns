@@ -1,0 +1,10 @@
+services:
+  ts-ddns:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ts-ddns
+    network_mode: bridge
+    restart: unless-stopped
+    volumes:
+      - ./config.toml:/app/config.toml:ro
